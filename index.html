@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <div class="input-submit">
+        <input
+          type="search"
+          name="ip_search"
+          id="ip_search"
+          required
+          placeholder="Search for any IP address or domain"
+        />
+        <button type="submit">
+          <img src="images/icon-arrow.svg" alt="search button icon" />
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__ip-details">
+        <div class="ip-address">
+          <p>IP ADDRESS</p>
+          <h3 id="ip-address">192.212.174,101</h3>
+        </div>
+        <div class="location">
+          <p>LOCATION</p>
+          <h3 id="location">
+            Brooklyn, NY <br />
+            10001
+          </h3>
+        </div>
+        <div class="timezone">
+          <p>TIMEZONE</p>
+          <h3 id="timezone">UTC-05:00</h3>
+        </div>
+        <div class="isp">
+          <p>ISP</p>
+          <h3 id="isp">SpaceX Starlink</h3>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/PNkosi">Perfect Nkosi</a>.
+      </p>
+    </footer>
+  </body>
+</html>

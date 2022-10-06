@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font weights */
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+  --br: 15px;
+}
+
+body {
+  font-family: 'Rubik';
+  font-size: 18px;
+}
+
+.header {
+  height: 250px;
+  background: url('images/pattern-bg.png') center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding-top: 20px;
+}
+
+.input-submit {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#ip_search,
+button {
+  height: 50px;
+  border: none;
+  outline: none;
+  margin: 0;
+}
+
+#ip_search {
+  width: 400px;
+  border-bottom-left-radius: var(--br);
+  border-top-left-radius: var(--br);
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+button {
+  width: 50px;
+  border-bottom-right-radius: var(--br);
+  border-top-right-radius: var(--br);
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--Very-Dark-Gray);
+}
+
+/*--------------------Main section-------------------- */
+.main {
+  height: calc(100vh - 250px);
+  position: relative;
+  background-color: var(--Dark-Gray);
+}
+
+.main__ip-details {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+
+  background-color: var(--white);
+  border-radius: var(--br);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ip-address,
+.location,
+.timezone,
+.isp {
+  width: 20%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.location,
+.timezone,
+.isp {
+  border-left: 1px solid rgb(223, 223, 223);
+}
+
+.main__ip-details p {
+  color: var(--Dark-Gray);
+  font-size: 14px;
+}
+
+.main__ip-details h3 {
+  margin-top: 10px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Media query fo small screens */
+@media (max-width: 768px) {
+  .header {
+    height: 300px;
+  }
+  .input-submit {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main__ip-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ip-address,
+  .location,
+  .timezone,
+  .isp {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .main__ip-details h3 {
+    font-size: 1rem;
+  }
+}
+
+/*--------------------Footer section-------------------- */
+.footer {
+  padding: 20px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
