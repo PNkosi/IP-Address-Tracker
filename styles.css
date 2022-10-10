@@ -15,12 +15,13 @@
   --medium: 500;
   --bold: 700;
 
-  --br: 15px;
+  --br: 15px; /* border radius*/
 }
 
 body {
   font-family: 'Rubik';
   font-size: 18px;
+  color: var(--Very-Dark-Gray);
 }
 
 .header {
@@ -29,6 +30,9 @@ body {
   color: var(--white);
   text-align: center;
   padding-top: 20px;
+  
+  position: relative;
+  z-index: 2;
 }
 
 .input-submit {
@@ -70,7 +74,7 @@ button:hover {
 .main {
   height: calc(100vh - 250px);
   position: relative;
-  background-color: var(--Dark-Gray);
+  z-index: 1;
 }
 
 .main__ip-details {
@@ -80,10 +84,12 @@ button:hover {
 
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   margin: 0 auto;
+  top: 50%;
   right: 0;
   left: 0;
+  z-index: 3;
 
   background-color: var(--white);
   border-radius: var(--br);
@@ -114,6 +120,7 @@ button:hover {
 .main__ip-details h3 {
   margin-top: 10px;
   transition: all 0.25s ease-in-out;
+  color: var(--Very-Dark-Gray);
 }
 
 /* Media query fo small screens */
@@ -128,6 +135,8 @@ button:hover {
   .main__ip-details {
     flex-direction: column;
     text-align: center;
+    transform: translateY(0);
+    width: 80%;
   }
 
   .ip-address,
@@ -148,7 +157,7 @@ button:hover {
   padding: 20px;
 }
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
 }
 .attribution a {
